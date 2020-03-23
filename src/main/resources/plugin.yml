@@ -1,0 +1,5 @@
+name: SS-Kotlin
+version: @version@
+api-version: "1.15"
+main: me.syari.ss.kotlin.Main
+author: sya_ri
