@@ -32,8 +32,3 @@ processResources {
         filter ReplaceTokens, tokens: [version: version]
     }
 }
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
