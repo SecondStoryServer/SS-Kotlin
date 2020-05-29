@@ -1,7 +1,6 @@
-import org.apache.tools.ant.filters.ReplaceTokens
-
 plugins {
     kotlin("jvm") version "1.3.72"
+    id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
 }
 
 group = "me.syari.ss.kotlin"
@@ -29,11 +28,17 @@ tasks {
     compileKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+}
 
-    processResources {
-        from(sourceSets.main.get().resources.srcDirs) {
-            val replaceMap = mapOf("version" to version)
-            filter<ReplaceTokens>("tokens" to replaceMap)
+bukkit {
+    name = project.name
+    version = project.version.toString()
+    main = "$group.Main"
+    author = "sya_ri"
+    apiVersion = "1.15"
+    commands {
+        register("ss-kotlin") {
+            description = "Display Kotlin Version & Package"
         }
     }
 }
