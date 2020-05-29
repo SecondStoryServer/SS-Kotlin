@@ -14,9 +14,14 @@ repositories {
     }
 }
 
+configurations {
+    embed
+    api.extendsFrom(embed)
+}
+
 dependencies {
     implementation("com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT")
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    embed("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 }
 
 compileKotlin {
@@ -24,7 +29,7 @@ compileKotlin {
 }
 
 jar {
-    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    from configurations.embed.collect { it.isDirectory() ? it : zipTree(it) }
 }
 
 processResources {
