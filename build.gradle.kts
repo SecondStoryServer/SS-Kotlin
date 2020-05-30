@@ -13,15 +13,9 @@ repositories {
     }
 }
 
-val embed: Configuration by configurations.creating
-
-configurations {
-    api.get().extendsFrom(embed)
-}
-
 dependencies {
     implementation("com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT")
-    embed("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 }
 
 tasks {
@@ -44,7 +38,7 @@ bukkit {
 }
 
 val jar by tasks.getting(Jar::class) {
-    from(embed.map {
+    from(configurations.compileOnly.get().map {
         if (it.isDirectory) it else zipTree(it)
     })
 }
