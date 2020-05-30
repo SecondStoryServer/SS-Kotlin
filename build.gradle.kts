@@ -44,7 +44,7 @@ bukkit {
 }
 
 val jar by tasks.getting(Jar::class) {
-    from(configurations.getByName("embed").map {
+    from(embed.map {
         if (it.isDirectory) it else zipTree(it)
     })
 }
