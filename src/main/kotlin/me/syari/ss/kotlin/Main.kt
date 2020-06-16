@@ -4,7 +4,7 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.plugin.java.JavaPlugin
 
-class Main: JavaPlugin() {
+class Main : JavaPlugin() {
     private val kotlinDescription = """
             §6--------[ §a§lSS-Kotlin §6]--------
             §6 * §dkotlin-jvm §7- §dversion 1.3.72
