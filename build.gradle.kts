@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT")
+    implementation("com.destroystokyo.paper:paper-api:1.16.1-R0.1-SNAPSHOT")
     compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 }
 
@@ -29,7 +29,7 @@ bukkit {
     version = project.version.toString()
     main = "$group.Main"
     author = "sya_ri"
-    apiVersion = "1.15"
+    apiVersion = "1.16"
     commands {
         register("ss-kotlin") {
             description = "Display Kotlin Version & Package"
