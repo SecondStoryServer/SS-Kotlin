@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin
 class Main : JavaPlugin() {
     private val kotlinDescription = """
             §6--------[ §a§lSS-Kotlin §6]--------
-            §6 * §dkotlin-jvm §7- §dversion 1.3.72
+            §6 * §dkotlin-jvm §7- §dversion ${KotlinVersion.CURRENT}
             §6 * §dkotlin-stdlib-jdk8
             §6-----------------------------
         """.trimIndent().lines().toTypedArray()
