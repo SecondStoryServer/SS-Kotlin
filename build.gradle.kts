@@ -1,10 +1,10 @@
 plugins {
-    kotlin("jvm") version "1.3.72"
+    kotlin("jvm") version "1.4.0"
     id("net.minecrell.plugin-yml.bukkit") version "0.3.0"
 }
 
 group = "me.syari.ss.kotlin"
-version = "1.3"
+version = "1.4.0"
 
 repositories {
     mavenCentral()
@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.destroystokyo.paper:paper-api:1.16.1-R0.1-SNAPSHOT")
-    compileOnly("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("com.destroystokyo.paper:paper-api:1.16.2-R0.1-SNAPSHOT")
+    compileOnly(kotlin("stdlib-jdk8"))
 }
 
 tasks {
